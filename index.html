@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/489badf097.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Question 1: HTML5 Structure and Semantic Organization-->
+    <!--This section has the navbar menu, headings, and section and footer section-->
+    <header>
+        
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="/" id="navbar_logo"><i class="fas fa-crown"></i>Kings Fitness</a>
+            <button class="navbar_toggle" id="mobile-menu"
+            aria-label="open navigation menu"
+            aria-expanded="false"
+            aria-controls="navbar_menu">
+
+                <span class="bar"></span>   
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar_menu" id="navbar_menu"> 
+                <li class="navbar_item">
+                    <a href="#home" class="navbar_links">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="#about" class="navbar_links">About</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="#services" class="navbar_links">Services</a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="/" class="button">JOIN US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </header>
+    <main>
+    <section class="main" id="home">
+        <div class="main_container">
+            <div class="main_content">
+            <h1>NEXT LEVEL</h1>
+            <h2>TRAINING</h2>
+            <p>The Standard Is The Standard!</p>
+            
+            </div>
+            <!--Question 2: Web Media Integration and Accessibility-->
+            <!--This has the main image and images for the cards on the home page-->
+           
+                
+            <div class="main_img--container">
+                <img src="images/mygympic.jpeg"
+                alt="Kings Fitness gym training environment" id="main_img"/>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Question 4 and 5: Registration Form and Validation -->
+<section class="join_section" id="join">
+
+    <h2>Join Kings Fitness</h2>
+    <p>Take the first step toward becoming part of the community.</p>
+
+    <form id="registration_form">
+
+        <label for="first_name">First Name:</label>
+        <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            minlength="3"
+            maxlength="20"
+            required
+        >
+
+        <label for="last_name">Last Name:</label>
+        <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            minlength="3"
+            maxlength="20"
+            required
+        >
+
+        <label for="email">Email Address:</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            required
+        >
+
+        <label for="password">Create Password:</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="8"
+            required
+        >
+
+        <label for="member_code">Four-Digit Membership Code:</label>
+        <input
+            type="text"
+            id="member_code"
+            name="member_code"
+            pattern="[0-9]{4}"
+            maxlength="4"
+            inputmode="numeric"
+            title="Enter exactly four digits."
+            required
+        >
+
+        <label for="birth_date">Date of Birth:</label>
+        <input
+            type="date"
+            id="birth_date"
+            name="birth_date"
+            required
+        >
+
+        <label for="membership">Choose Membership:</label>
+        <select id="membership" name="membership" required>
+            <option value="">Select a membership</option>
+            <option value="Basic">Basic</option>
+            <option value="Premium">Premium</option>
+            <option value="Elite">Elite</option>
+        </select>
+
+        <p>Training Experience:</p>
+
+        <label>
+            <input type="radio" name="experience" value="Beginner" required>
+            Beginner
+        </label>
+
+        <label>
+            <input type="radio" name="experience" value="Intermediate">
+            Intermediate
+        </label>
+
+        <label>
+            <input type="radio" name="experience" value="Advanced">
+            Advanced
+        </label>
+
+        <label for="goals">What are your training goals?</label>
+        <textarea
+            id="goals"
+            name="goals"
+            rows="5"
+            placeholder="Tell us about your goals..."
+            required
+        ></textarea>
+
+        <label>
+            <input type="checkbox" id="agreement" name="agreement" required>
+            I agree to the membership terms.
+        </label>
+
+        <div class="form_buttons">
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset Form</button>
+        </div>
+
+    </form>
+
+    <!-- Question 8: JavaScript Button Interaction -->
+<div class="form_interaction">
+    <button type="button" id="motivation_btn">
+        Get Motivated
+    </button>
+
+    <p id="motivation_message" aria-live="polite">
+        Ready to raise your standard?
+    </p>
+</div>
+
+<!-- Question 9: Registration Confirmation -->
+<div class="registration_feedback">
+    <p id="membership_preview" aria-live="polite">
+        Your membership selection will appear here.
+    </p>
+
+    <p id="confirmation_message" aria-live="polite"></p>
+</div>
+
+</section>
+
+    <!--Question 3: WCAG Basics and Inclusive Design-->
+
+    <!--Services-->
+    <section class="services" id="services">
+        
+        <div class="service_container">
+            <div class="services_card">
+                <h3>Join The Community</h3>
+                <p>Workouts, Diets and more</p>
+                <button>Explore Membership</button>
+            </div>
+            <div class="services_card">
+                <h3>Ready For Greatness?</h3>
+                <p>Take The Risk</p>
+                <button>Get Started</button>
+            </div>
+        </div>
+    </section>
+    <!--About Section-->
+    <section class="about" id="about">
+        <h2>About Kings Fitness</h2>
+        <p>Kings Fitness is built on commitment, discipline and never lowering the standard.
+            Our Mission is to encourage individuals to challenge themselves.
+        </p>
+    </section>
+    <!--Question 3:Video-->
+    <section class="video_section">
+        <h2>Train With Purpose</h2>
+        <p>
+            Watch this training video to see the intent of each workout 
+        </p>
+
+        <video controls width="100%" preload="metadata">
+
+        <source src="videos/media.mp4" type="video/mp4">
+        <track
+        src="videos/captions.vtt"
+        kind="captions"
+        srclang="en"
+        label="English Captions"
+        default>
+        </video>
+    </section>
+
+    <!-- Question 6: HTML Tables and Responsive Layout -->
+<section class="schedule_section" id="schedule">
+
+    <h2>Kings Fitness Weekly Schedule</h2>
+    <p>Find a training session that fits your schedule.</p>
+
+    <div class="table_container"
+         role="region"
+         aria-label="Weekly training schedule"
+         tabindex="0">
+
+        <table class="training_table">
+            <caption>Weekly Training Schedule</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Training Session</th>
+                    <th scope="col">Time</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Strength Training</td>
+                    <td>9:00 AM - 10:00 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Cardio Training</td>
+                    <td>10:00 AM - 11:00 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Group Fitness</td>
+                    <td>5:00 PM - 6:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>Functional Training</td>
+                    <td>9:00 AM - 10:00 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>Full Body Training</td>
+                    <td>4:00 PM - 5:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!--Footer Section-->
+    <!--Question 1 and 3: Footer-->
+<footer class="footer_container">
+    <div class="footer_links">
+        <div class="footer_link--wrapper">
+            <div class="footer_links--items">
+                <h2>About Us</h2>
+                <a href="/">Core Values</a>
+                <a href="/">Our Mission</a>
+                <a href="/">Join The Movement</a>
+                <a href="/">Locations</a>
+                <a href="/">Schedule a Consultation</a>
+             </div>
+              <div class="footer_links--items">
+                <h2>Contact Us</h2>
+                <a href="tel:3214828852">Phone: 321-482-8852</a>
+                <a href="mailto:tlennear3@gmail.com">Email: tlennear3@gmail.com</a>
+                
+             </div>
+        </div>
+         <div class="footer_link--wrapper">
+            <div class="footer_links--items">
+                <h2>Social Media</h2>
+                <a href="/">Instagram</a><br>
+                <a href="/">TikTok</a><br>
+                <a href="/">LinkedIn</a><br>
+                <a href="/">FaceBook</a><br>
+                <a href="/">X</a><br>
+                <a href="/">YouTube</a><br>
+             </div>
+        </div>
+         <div class="footer_link--wrapper">
+            <div class="footer_links--items">
+                <h2>Videos</h2>
+                <a href="/">Instagram</a>
+                <a href="/">TikTok</a>
+             </div>
+        </div>
+    </div>
+        <div class="social_media">
+            <div class="social_media--wrap">
+                <div class="footer_logo">
+                    <a href="/" id="footer_logo"><i class="fas fa-crown"></i>Kings</a>
+                </div>
+                <p class="website_rights"> &copy; Kings Fitness 2026. All rights reserved</p>
+                <div class="social_icons">
+                    <a href="https://www.instagram.com/" class="social_icon--link"><i class="fa-brands fa-instagram" 
+                        target="_blank" 
+                        aria-label="Visit Instagram"> 
+                    </i></a>
+                    
+                    <a href="/" class="social_icon--link"><i class="fa-brands fa-tiktok" 
+                        target="_blank">   
+                    </i></a>
+                    
+                    <a href="/" class="social_icon--link"><i class="fa-brands fa-linkedin" 
+                        target="_blank">   
+                    </i></a>
+                    
+                    <a href="/" class="social_icon--link"><i class="fa-brands fa-facebook" 
+                        target="_blank">   
+                    </i></a>
+                    
+                    <a href="/" class="social_icon--link"><i class="fa-brands fa-x-twitter" 
+                        target="_blank">    
+                    </i></a>
+                    <a href="/" class="social_icon--link"><i class="fa-brands fa-youtube" 
+                        target="_blank"> 
+                        </i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
